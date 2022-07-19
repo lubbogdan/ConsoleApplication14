@@ -84,8 +84,40 @@ public:
         this->birthday = birthday;
     }
 };
+class Country
+{
+private:
+    MyList<National> people;
+public:
+    Country()
+    {
+
+    }
+
+    void add(National p)
+    {
+        people.addElement(p);
+
+    }
+    void swowPeople()
+    {
+        for (int i = 0; i < people.getSize(); i++)
+        {
+            cout << people.getElement(i).getName() << people.getElement(i).getBirthday().year << people.getElement(i).getBirthday().month << people.getElement(i).getBirthday().day << endl;
+        }
+    }
+};
 int main()
 {
-
+    Country c;
+    date d;
+    d.year = 2000;
+    d.month = 10;
+    d.day = 10;
+    National n1("Name1", d);
+    c.add(n1);
+    National n2("Name2", d);
+    c.add(n2);
+    c.swowPeople();
 }
 
