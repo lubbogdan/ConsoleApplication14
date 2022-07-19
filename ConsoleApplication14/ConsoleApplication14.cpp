@@ -84,6 +84,29 @@ public:
         this->birthday = birthday;
     }
 };
+class Country
+{
+private:
+    MyList<National> people;
+public:
+    Country()
+    {
+
+    }
+
+    void add(National p)
+    {
+        people.addElement(p);
+
+    }
+    void swowPeople()
+    {
+        for (int i = 0; i < people.getSize(); i++)
+        {
+            cout << people.getElement(i).getName() << people.getElement(i).getBirthday().year << people.getElement(i).getBirthday().month << people.getElement(i).getBirthday().day << endl;
+        }
+    }
+};
 int main()
 {
 
