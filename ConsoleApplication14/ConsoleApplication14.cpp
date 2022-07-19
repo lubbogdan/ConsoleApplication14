@@ -45,6 +45,45 @@ public:
         return this->currentIndex;
     }
 };
+
+struct date
+{
+    int year;
+    int month;
+    int day;
+};
+class National
+{
+private:
+    string name;
+    date birthday;
+public:
+    National()
+    {
+
+    }
+    National(string name, date birthday)
+    {
+        this->name = name;
+        this->birthday = birthday;
+    }
+    string getName()
+    {
+        return this->name;
+    }
+    void setName(string name)
+    {
+        this->name = name;
+    }
+    date getBirthday()
+    {
+        return this->birthday;
+    }
+    void setBirthday(date birthday)
+    {
+        this->birthday = birthday;
+    }
+};
 int main()
 {
 
