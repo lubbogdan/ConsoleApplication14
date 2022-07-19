@@ -109,6 +109,15 @@ public:
 };
 int main()
 {
-
+    Country c;
+    date d;
+    d.year = 2000;
+    d.month = 10;
+    d.day = 10;
+    National n1("Name1", d);
+    c.add(n1);
+    National n2("Name2", d);
+    c.add(n2);
+    c.swowPeople();
 }
 
